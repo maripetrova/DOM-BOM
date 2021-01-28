@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.getElementByI</title>
+</head>
+<body>
+    <p>Псевдо Солнечная система</p>
+   <p id="pi">Солнечная система</p> 
+   <ul>
+       <li id="li1">Солнце</li>
+       <li id="li2">Меркурий</li>
+       <li id="li3">Венера</li>
+       <li id="li4">Земля</li>
+       <li id="li5">Марс</li>
+   </ul>
+</body>
+<script>
+//let element = document.getElementById("pi")
+//console.log(element)
+
+//let element2 = document.querySelector("p")
+//console.log(element2)
+
+//let perm = 10;
+//console.log(perm);
+//perm = 20;
+//console.log(perm);
+
+//element2.innerText = element2.innerText + " Планетки";
+//element2.innerText += " Планетки";
+//element2.innerHTML += "<b> Планетки</b>";
+
+//let element3 = document.querySelectorAll("li");
+//element3[2].innerText = 'Юпитер';
+
+//let elem = document.querySelector("p");
+//elem[1].before("before") // новый блок(До открытия тега)
+//elem[1].prepend("prepend") //добавляется прямо перед текстом(Сразу после открытия тега)
+//elem[1].after("after") // новый блок(После закрытия тега)
+//elem[1].append("append") //добавляется прямо после текста(Перед закрытием тега)
+let eleme = document.querySelectorAll("li");
+let p = document.createElement("li");
+eleme[3].after(" Луна")
+
+</script>
+</html>

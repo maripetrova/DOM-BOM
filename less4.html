@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>Список</p>
+<ul>
+    <li>Раз</li>
+    <li>Два</li>
+    <li>Три</li>
+</ul>
+</body>
+<script>
+// document.addEventListener("click", ()=> console.log("click"))// mousedown+mouseup
+// document.addEventListener("mousedown", ()=> console.log("mousedown"))// нажатие
+// document.addEventListener("dbclick", ()=> console.log("dbclick"))// mousedown+mouseup X2
+// document.addEventListener("mouseup", ()=> console.log("mouseup"))// поднятие
+
+//document.addEventListener("mousedown", (event)=> console.log("mousedown: "+event.which ))// 1- нажатие левой кнопки мыши, 2- нажание на скролл, 3- нажатие на правую кнопку мыши
+
+
+// let clck = document.querySelectorAll("li");
+// clck[0].addEventListener("click", () => clck[0].style = "font-weight:888")
+// clck[0].addEventListener("click", () => clck[0].innerHTML = "<b>Раз</b>")
+// clck[1].addEventListener("mousedown", (event) => {
+//     if(event.which == 3) {
+//         console.log(event.which)
+//         }
+//     }
+// )
+// let edit = document.querySelectorAll("li");
+// edit[1].addEventListener("mousedown",
+// (event) =>{ if(event.which == 3) {
+//     console.log("Была нажата: " +event.which + " кнопка мыши")
+//         }
+//     }
+// )
+// event.ctrlKey
+// event.shiftKey
+// event.altKey
+// event.metaKey - ctrl
+document.addEventListener("click", () => {
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey)
+        console.log("Ура!")
+    }
+)
+</script>
+</html>

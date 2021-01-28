@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>elem.insertAdjacentHTML</title>
+    <style>
+        .msg {
+            color: red;
+            background: silver;
+        }
+    </style>
+</head>
+<body>
+<p>Солнечная система</p>
+<ul>
+    <li>Солнце</li>
+    <li>Меркурий</li>
+    <li>Венера</li>
+    <li>Земля</li>
+    <li>Марс</li>
+</ul>
+</body>
+<script>
+    //let elem = document.querySelectorAll('li');
+    //elem[3].insertAdjacentHTML('beforebegin', 'Something'); // до открывающего тега
+    //elem[3].insertAdjacentHTML('beforeend', 'Something'); // после последнего потомка
+    //elem[3].insertAdjacentHTML('afterbegin', 'Something'); // после последнего потомка
+    //elem[3].insertAdjacentHTML('afterend', 'Something'); // после закрывающего тега
+
+
+    //elem[3].insertAdjacentHTML('afterend', '<li>Сатурн</li>')
+
+    // let li = document.createElement('li');
+    // li.innerText = 'Луна';
+    // let elem = document.querySelectorAll('li');
+    // elem[1].append(li);
+    // li.className = 'msg';
+
+    let p = document.createElement('p');
+    let ul = document.createElement('ul');
+
+    p.innerText = 'Напитки';
+    let putt = document.querySelector('ul');
+    putt.after(p);
+
+    let putt2 = document.querySelectorAll('p');
+    putt2[1].after(ul);
+
+    let putt3 = document.querySelectorAll('ul');
+    putt3[1].insertAdjacentHTML('afterbegin', '<li>Вода</li><li>Сок</li><li>Кофе</li>');
+</script>
+</html>

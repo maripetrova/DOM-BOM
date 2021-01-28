@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Onclick</title>
+</head>
+<body>
+<!--<p>-->
+<!--    Нажми на меня-->
+<!--</p>-->
+<!--<button onclick="show()">-->
+<!--    Клик-->
+<!--</button>-->
+<p>Какой-то список</p>
+<ul>
+    <li>Раз</li>
+    <li>Два</li>
+    <li>Три</li>
+</ul>
+</body>
+<script>
+    //let butt = document.querySelector("p");
+    //let butt = document.querySelector("button");
+    // butt.onclick = show1;
+    // butt.onclick = show2;
+    //function show1() {
+    //     alert('Привет!');
+        //console.log("Событие произошло!");
+    //}
+    //butt.onclick = null;
+    // function show2() {
+    //     alert("ABC")
+    // }
+    // butt.addEventListener("click", show1())
+    // butt.addEventListener("click", show2())
+    // butt.addEventListener("click", (event) => console.log("Событие:" +event.type))
+    //butt.addEventListener("click", (event) => console.log("КоординатыX:" +event.clientX))
+    //butt.addEventListener("click", (event) => console.log("КоординатыY:" +event.clientY))
+
+    // let butt = document.querySelector("p");
+    // butt.onclick = change;
+    // function change() {
+    //     butt.innerText = "Спасибо";
+    // }
+
+    // butt.addEventListener("click", () => butt.innerText = "Спасибо!")
+    // butt.addEventListener("click", (event) => console.log(event.type))
+
+    let li = document.querySelectorAll("li");
+    li[0].addEventListener("click", (event) => li[0].innerText = "1")
+    li[1].addEventListener("click", (event) => console.log("Событие:" +event.type))
+    li[2].addEventListener("click", (event) => console.log("КоординатыX:" +event.clientX))
+    li[2].addEventListener("click", (event) => console.log("КоординатыY:" +event.clientY))
+</script>
+</html>
