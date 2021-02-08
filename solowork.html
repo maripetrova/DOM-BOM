@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Петрова Мария</title>
+</head>
+<body>
+<ul>
+    <li>Chevrolet</li>
+    <li>Citroen</li>
+    <li>Ferrari</li>
+    <li>Ford</li>
+    <li>Honda</li>
+    <li>Hyundai</li>
+    <li>Lexus</li>
+    <li>Shcoda</li>
+</ul>
+
+<script>
+    //1 задание
+    let p = document.createElement('p');
+    p.innerText = 'Марки машин';
+    let putt = document.querySelector('ul');
+    putt.before(p);
+    // 2 задание
+    let elem = document.querySelectorAll("li");
+    elem[2].insertAdjacentHTML("afterend", "<li>Супра</li>");
+    // 3 задание(Б)
+    let abz = document.querySelectorAll("li");
+    abz[4].addEventListener("mouseover", () => {
+        abz[4].innerText = "Dodge"
+    })
+    // 3 задание(А)
+    elem[0].addEventListener("mousedown", (event) => {
+        console.log(event.which);
+        elem[0].remove();
+    })
+    // 4 задание
+    document.addEventListener("keydown", () => {
+            if ((event.ctrlKey || event.metaKey) && event.shiftKey)
+                putt.insertAdjacentHTML("afterend", "<p>GH</p><ul><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ul>")
+        }
+    );
+
+
+</script>
+
+</body>
+</html>

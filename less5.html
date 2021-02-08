@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Какой-то список</p>
+<ul>
+    <li>Раз</li>
+    <li>Два</li>
+    <li>Три</li>
+</ul>
+<script>
+    let abz = document.querySelector("p");
+    abz.addEventListener("mouseover", () => {
+        abz.innerText = "Вы навелись на элемент" // наводим на элемент
+    })
+    // abz.addEventListener("mouseout", () => {
+    //     console.log("Вы вышли из элемента <p>!") // отводим от элемента
+    // })
+    // document.addEventListener("keydown", (event) => {
+    //     console.log(event.type); // нажимаем кнопку
+    // })
+    // document.addEventListener("keyup", (event) => {
+    //     console.log(event.key); // отпускаем кнопку
+    // })
+    // document.addEventListener("keyup", (event) => {
+    //     console.log("Key: " +event.key + " Code:" +event.code);
+    // })
+    // .key показывает раскладку и регистр, .code показывает нажатие на английской раскладке
+    // document.addEventListener("keydown", (event) => {
+    //     console.log("Key: " +event.key);
+    // })
+    // document.addEventListener("keyup", (event) => {
+    //     console.log("Отпустил");
+    // })
+    // document.addEventListener("keydown", (event) => {
+    //     console.log("Repeat: " +event.repeat);
+    // })
+    //     let abz = document.querySelector("p");
+    //     abz.addEventListener("mouseover", () => {
+    //         abz.innerText = "Ухты! Пухты!"
+    //     })
+    //     abz.addEventListener("mouseout", () => {
+    //         abz.innerText = "Какой-то список"
+    //     })
+    // ⬇️ При нажатии на клавишу 'Ю' пусть поменяется текстовое сво-во 3 элемента на что-нибудь
+    // let u = document.querySelectorAll("li")
+    //
+    // document.addEventListener("keyup", (event)=>{
+    //     if (event.key === "ю") {
+    //         u[2].innerText = "ололо"
+    //     }
+    // })
+
+</script>
+</body>
+</html>
