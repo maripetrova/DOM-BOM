@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="functions8.js"></script>
+</head>
+<body>
+    <button onclick="openW();">Открыть окошко</button>
+    <button onclick="closeW();">Закрыть окошко</button>
+    <button onclick="fullW();">Заполнить окошко</button>
+    <button onclick="drawW();">Закрасить окошко</button>
+<script>
+    let igors = [];
+    let topp = 100;
+    let leftt = 100;
+
+    function openW() {
+        //open("http://ya.ru", "", "width=300, height=200, top=100, left=100")
+        igors.push(open("", "", `width=300, height=200, top=${topp}, left=${leftt}`));
+        topp += 100;
+        leftt += 100;
+
+    }
+    function closeW() {
+        igors.pop().close();
+    }
+    function fullW() {
+        let n = igors.length;
+        while(n--) {
+            igors[n].document.write(`<div>Igor №${n + 1}</div>`);
+        }
+    }
+    function drawW() {
+        let n = igors.length;
+        while(n--) {
+            console.log(getRGB(40))
+            igors[n].document.body.style.backgroundColor = getRGB(40);
+            console.log(n);
+        }
+    }
+</script>
+</body>
+</html>

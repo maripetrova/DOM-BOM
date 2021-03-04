@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        h1 {
+            margin: 0;
+            padding: 50px;
+            font: 100 40px / 50px sans-serif;
+            text-align: center;
+            background-color: lavenderblush;
+        }
+        #maxxx {
+            background-color: peachpuff;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <div id="maxxx"></div>
+<script>
+    console.log("Hello, Window!");
+    let max = document.getElementById("maxxx");
+    max.style.height = window.innerHeight - 150 + "px";
+    // Размеры viewport (содержимого экрана браузера)
+    // window.innerHeight ~ 100vh
+    // window.innerWidth ~ 100vw
+    /* Внешние размеры
+    * window.outerHeight - с адресной строкой, консолько и всем, всем
+    * window.outerWidth
+    */
+
+    /*
+    * screen - информация о мониторе пользователя
+    * screen.width
+    * screen.height
+    * screen.availWidth
+    * screen.availHeight
+    * screen.availTop
+    * screen.availLeft
+    * */
+
+    /*
+    * navigator - информация о браузере и языке пользователя
+    * */
+
+    /*
+    * location - информация о адресе текущей странице
+    * */
+</script>
+</body>
+</html>
