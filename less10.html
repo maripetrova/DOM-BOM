@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            font: 16px sans-serif;
+        }
+        h1 {
+            width: 100%;
+            text-align: center;
+        }
+        #teams {
+            width: 900px;
+            display: grid;
+            grid-template-columns: repeat(4, 200px);
+            gap: 40px;
+        }
+        #teams>div {
+            border-radius: 10px;
+            box-shadow: 0 0 5px 1px rgba(0,0,0,.4);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+  <h1>Команды</h1>
+  <div id="teams"></div>
+
+  <script>
+    const students = [
+            "Абдулаев Ильяс",
+            "Абдулаев Магомед",
+            "Андроникашвили Георгий",
+            "Бородавченко Егор",
+            "Долматов Данил",
+            "Егорова Арина",
+            "Еремина Ксения",
+            "Жгун Екатерина",
+            "Колякин Никита",
+            "Константинов Егор",
+            "Кочеткова Дарья",
+            "Куленко Егор",
+            "Перелыгин Алексей",
+            "Петрова Мария",
+            "Регель Кирилл",
+            "Романцов Данила",
+            "Рупперт Алина",
+            "Сацерадзе Нино",
+            "Семененко Иван",
+            "Соболев Даниил",
+            "Федотов Антон",
+            "Шейко Даниил"
+    ];
+    console.log(students.length);
+    students.sort((a,b) => {
+      return Math.random() - 0.5;
+    });
+    console.log(students);
+    let teams = [];
+    let n = 0;
+    for (let i = Math.floor(students.length / 3); i > 0; i--) {
+      if (i !== 1) {
+        teams.push([
+                students[n],
+                students[n+1],
+                students[n+2]
+        ]);
+        n += 3;
+      } else {
+        teams.push([
+                students[n],
+                students[n+1]
+        ]);
+        teams.push([
+          students[n+2],
+          students[n+3]
+        ]);
+        n += 4;
+        console.log(n);
+      }
+    }
+    const main = document.getElementById("teams");
+    teams.forEach(t => {
+      let card = document.createElement("div");
+      t.forEach(ppl => {
+        let student = document.createElement("span");
+        student.innerText = ppl;
+        card.appendChild(student);
+      });
+      main.appendChild(card);
+    })
+  </script>
+
+</body>
+</html>
