@@ -14,14 +14,50 @@
 </head>
 <body>
   <h1>Document Object Model</h1>
+<!--  This is comment-->
   <p>
     Lorem ipsum dolor sit amet.
     <span>this is red text</span>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
     Facilis, nesciunt?
   </p>
+  <details>
+    <summary>Тут будет новый текст</summary>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem, commodi consectetur cupiditate eaque et id itaque labore modi, nesciunt quo quod repellat repellendus reprehenderit repudiandae? Atque aut consequatur, cum dolorem doloremque dolores eligendi non reprehenderit sapiente, sequi vitae voluptatibus. At blanditiis consectetur dolor dolore ea eum facilis illo incidunt maxime molestias nam natus, nulla, omnis perspiciatis praesentium qui saepe similique sint, suscipit voluptatum? Accusantium ad consequuntur iure quae rem. Aut commodi deserunt dolorum, eaque eveniet iure, magni, molestias nihil placeat possimus quia saepe sequi totam ut veniam. Corporis non, voluptatem. Accusamus adipisci commodi eaque, minima modi saepe sunt vitae!
+  </details>
   <script>
-    console.log("Hello, Kitties!")
+    console.log("Hello, Kitties!");
+    const span = document.lastChild.lastChild.childNodes[5].firstChild.nextSibling;
+    span.innerText = ("Ololo")
+    console.log(span.parentElement);
+    //document.body - получение узла элемента BODY
+    console.log(document.body.nodeType);
+    console.log(document.nodeType);
+    console.log(document.firstChild.nodeType);
+    console.log(document.body.childNodes[3].nodeType);
+    console.log(document.firstChild.nodeType);
+
+
+    console.log(document.body.nodeName);
+    console.log(document.nodeName);
+    console.log(document.firstChild.nodeName);
+    console.log(document.body.childNodes[3].nodeName);
+    console.log(document.firstChild.nodeName);
+
+  console.log(span.firstChild);
+  console.log(span.firstChild.nodeValue);
+  span.firstChild.nodeValue = "Change text";
+
+  const summary = document.body.firstElementChild.nextElementSibling.nextElementSibling.firstElementChild;
+  summary.firstChild.nodeValue = ""
+    /*
+    * По нажатию на кнопку изменять текст в соответствующем месте:
+    * - Заголовок
+    * - Абзац
+    * - Details
+    *
+    * Текст генирируется рандомно
+    * */
   </script>
 </body>
 </html>
