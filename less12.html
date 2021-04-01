@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Таблица</title>
+</head>
+<body>
+<script>
+  const getNumber = function (max = 11, min = 0) {
+    return Math.floor(Math.random() * (max - min) + min);
+  }
+  const getRGBA = function(alpha = 100) {
+    let r = getNumber(256);
+    let g = getNumber(256);
+    let b = getNumber(256);
+    alpha = +(alpha / 100).toFixed(2);
+   return `rgba(${r},${g},${b},${alpha},)`
+  }
+  const x = getNumber(11, 3);
+  const y = getNumber(11, 3);
+  let html = "<table>";
+    for (let row = 0; row < y; row++) {
+        html += "<tr>";
+        for (let cell = 0; cell < x; cell++) {
+            html += `<td>${getNumber(101)}</td>`;
+        }
+        html += "</tr>";
+    }
+  html += "</table>"
+  document.body.innerHTML += html;
+let ftr = document.body.firstElementChild.nextElementSibling
+</script>
+</body>
+</html>
