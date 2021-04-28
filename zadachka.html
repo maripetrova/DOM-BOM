@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача</title>
+    <script src="functions.js"></script>
+</head>
+<body>
+    <script>
+        let x = getNumber();
+        let y = getNumber();
+        let html = "<table>";
+        for(let i = 0; i < y; i++) {
+            html += "<tr>";
+            for(let q = 0; q < x; q++) {
+                html += `<td>${getNumber(101)}</td>`;
+        }
+            html += "</tr>";
+        }
+        html += "</table>";
+        document.body.innerHTML += html;
+        
+        let tr = document.body.firstElementChild.nextElementSibling.firstElementChild.childNodes
+        
+        for(let value of tr) {
+            let children = value.childNodes;
+            for(let value of children) {
+                if(value.innerText >= 50) {
+                    value.style.backgroundColor = `${getRGB(30)}`;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

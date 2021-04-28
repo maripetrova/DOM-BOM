@@ -1,8 +1,36 @@
+html {
+    font-size: 20px;
+}
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Impact", fantasy;
+}
 .container {
     display: flex;
+    gap: 2rem;
 }
 .item {
-    height: 50px;
-    border: solid;
-    flex: 1;
+    box-shadow: 0 0 5px 0 rgba(19, 224, 36, 0.431), 0 0 15px 0 rgba(0, 0, 0, .2);
+    width: 10rem;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border-radius: 5px;
+}
+.btn {
+    outline: none;
+    border: none;
+    background: rgba(19, 224, 36, 0.431);
+    border-radius: 5px;
+    margin-top: 2rem;
+    height: 2rem;
+    width: 3rem;
 }
