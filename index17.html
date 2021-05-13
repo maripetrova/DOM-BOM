@@ -46,7 +46,7 @@
       cnt++;
       console.log("Click" + cnt)
     }
-    const changeValue = function (e)
+    const changeValue = function (e) {
         e.preventDefault();
         this.firstChild.nodeValue = (Math.random() * 10).toFixed(0);
         if (fps.innerText === "10") {
